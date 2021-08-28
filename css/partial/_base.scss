@@ -3,8 +3,16 @@
 $font-raleway: 'Raleway', sans-serif;
 $purple: #7122EF;
 $yellow: #D9B60B;
+$white: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
  body {
      font: $font-raleway;
      font-size: 1.5rem;
+     width: 100%;
  }   

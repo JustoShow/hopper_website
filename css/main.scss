@@ -1,54 +1,95 @@
 @import 'partial/base';
 
-.nav-container {
-    display: flex;    
+$height: 300;
+
+.navbar-brand img {
+    width: 100px;
+    height: 50px;
 }
 
-.logo-container {
-    height: 200px;
+.intro {
+    margin-top: 76px;
+    position: initial;
 
-    img {
-        max-width: 100%;
+    .text {
+        padding: 1.5rem;
+        z-index: 0;        
     }
 }
 
-.nav-items {
-    ul li {
-        list-style: none;
-        padding: 10px;
-    }
-
-    .nav-btn, .nav-link {
-        padding: 10px;
-    }
-
+.img-container {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;   
     
+    img {
+        max-height: 100%;
+    }
+}
 
-    a, i {
-        color: $purple;
+.window .pane {
+    padding: 0;
+    margin: 0;
+}
+
+.pane {
+    overflow: hidden;
+}
+
+.form-container {
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+footer {
+
+    padding: 1rem;
+    margin-top: 50px;
+
+    li {
+        list-style: none;
+    }
+}
+
+.bg-purple {
+    background-color: $purple;
+    color: $white;
+}
+
+.bg-yellow {
+    background-color: $yellow;
+    color: $white;
+}
+
+.btn-primary {
+    background-color: $purple;
+}
+
+@media (min-width: 992px) {
+
+    #navbarSupportedContent {
+        margin-top: 0;
     }
 
-    i {
-        border: 3px solid $purple;
-        padding: 5px;
-        border-radius: 5px;
-    }
+    .intro {
+        margin-top: 76px;
+        position: relative;
+         .img-container {
+             height: 100vh;
+         }
 
-    .nav-link {
-        display: block;
-        border-bottom: 2px solid lighten($purple, 35%);
-    }
-
-    a {
-        text-decoration: none;
-        
-        font-weight: bold;
-        text-transform: uppercase;  
-        
-
-        &:hover {
-            color: $yellow;
-            font-size: 1.4rem;
+        .text {
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            z-index: 1;
+            padding: 1.5rem;
+            background-color: $purple;
+            opacity: 0.5;            
         }
     }
 }
